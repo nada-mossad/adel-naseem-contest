@@ -1,0 +1,131 @@
+#a:
+x,y=input().split()
+print(eval(f"{x}*{y}"))
+#b:
+x=int(int(int(int(int(input())))))
+print(f"ABC{x}")
+#c:
+N,A,B=list(list(map(int,input().split())))
+print(N-A+B)
+#d:
+x=int(input())
+if x==0:
+  print(1)
+elif x==1:
+  print(0)
+#e:
+n=int(input())
+if n%2==0:
+  print(n)
+else:
+  print(n*2)
+#f:
+x=input()
+ind=int(int(int(len(x)//2)))
+print(x[ind])
+#g:
+x,y,n=list(map(int,input().split()))
+if n<3:
+  print(x*n)
+else:
+  l=n//3
+  m=y*l+((n-(l*3))*x)
+  k=x*n
+  print(min(m,k))
+#h:
+n=int(input())
+while(n!=3003):
+  if n%4==2:
+    print(n)
+    break
+  else:
+    n=n+1
+#i
+n=int(int(int(int(int(int(input()))))))
+print(2**n)
+#j:
+n=input()
+""""""""""""""""""""""""
+print(f"""{n[-2]+n[-1]}""")
+#k:
+x=list(map(int,input().split()))
+n=x[1]
+s=x.sort()
+if x[1] ==n:
+  print("Yes")
+else:
+  print("No")
+#l:
+""""""""""""""""""""""""""""""""""""""
+n=input()
+s=input()
+print(s[-1])
+#m:
+a,b=list(map(int,input().split()))
+if a==1 and b==10:
+  print("Yes")
+elif a==10 and b==1:
+  print("Yes")
+elif b ==a+1 or b==a-1:
+  print("Yes")
+else:
+  print("No")
+#n:
+from math import log
+n = int(input())
+if log(2)*n > log(n)*2:
+  print("Yes")
+else:
+  print("No")
+#o:
+n=int(input())
+if n <=(2**31)-1 and n>= -2**31:
+  print("Yes")
+else:
+  print("No")
+#p:
+s=input()
+x,y=list(map(int,input().split()))
+s=[i for i in s]
+t=s[x-1]
+s[x-1]=s[y-1]
+s[y-1]=t
+print("".join(s))
+#q:
+n,k,a=list(map(int,input().split()))
+x=list(range(n))
+a=a-1
+for i in range(k-1):
+  if a== n-1:
+    x[a]="done"
+    a=0
+  else:
+    x[a]="done"
+    a=a+1
+print(a+1)
+#r:
+import math
+x=float(input())
+if int(x)%2==0 and x%2==0.5:
+  print(math.ceil(x))
+else:
+  print(round(x))
+ #s:
+n=int(input())
+s=list(map(int,input().split()))
+r=0
+ad = {}
+for a in s:
+    if a in ad:
+        ad[a] += 1
+    else:
+        ad[a] = 1
+counted=[]
+for i,v in ad.items():
+  if i not in counted:
+    counted.append(i)
+    if v>i:
+        r+=v-i
+    elif v<i:
+        r+=v  
+print(r)
